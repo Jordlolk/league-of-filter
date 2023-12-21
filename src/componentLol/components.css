@@ -1,0 +1,277 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --colorBorders: #fea71b;
+    --colorEffects: #00ccff;
+    --black : #000000;
+    --red : #ff0000;
+    --white : rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 700px) {
+        .champDetails h2{
+            font-size: 1.4rem;
+        }
+        .SelectedChamp .champDetails img{
+            width: auto;
+            height: 18rem;
+            border-radius: 18px;
+            border: groove 4px var(--black) ;
+            box-shadow: var(--white)  1px 1px 22px;
+        }
+        .SelectedChamp{
+            height: 38rem;
+        }
+        .lore h2{
+            width: 80%;
+            margin: auto;
+        }
+        .back{
+            height: 38rem;
+        }
+} 
+@media screen and (max-width:699px) {
+        .champDetails h2{
+            font-size: 1rem;
+        }
+        .SelectedChamp .champDetails img{
+            width: auto;
+            height: 14rem;
+            border: groove 4px var(--black) ;
+            box-shadow: var(--white)  1px 1px 18px;
+        }
+        .SelectedChamp{
+            height: 32rem;
+        }
+        .lore h2{
+            width: 100%;
+        }
+        .back{
+            height: 32rem;
+        }
+        /* MOBILE */
+}
+.Banner{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/public/imgs/space_img.png);
+    border-bottom: var(--colorBorders) solid 4px;
+}
+.Banner img {
+    max-width: 100%;
+    height: 20rem;
+}
+.Banner h1{
+    font-size: 2.5rem;
+    text-shadow: 5px 4px 2px var(--black);
+}
+.Formulario{
+    text-align: center;
+    background-color: var(--black);
+}
+.SelectChamp{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.SelectChamp section{
+    height: auto;
+    width: 100%;
+}
+.SelectChamp label{
+    display: block;
+    color: var(--colorBorders);
+    font-weight: 900;
+    text-shadow: 2px 1px 0px var(--black);
+    margin-bottom: 14px;
+    font-size: 38px;
+}
+.SelectChamp input{
+    background-color: var(--black);
+    width: 50%;
+    margin: 12px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    border: solid var(--colorBorders) 1px;
+    border-radius: 10px;
+    padding: 18px;
+    transition: ease-in-out 500ms;
+}
+.SelectChamp input:focus{
+    box-shadow: 1px -2px 22px var(--colorEffects);
+}
+.SelectChamp h1{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.SelectChamp section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ChampSelection{
+    background: radial-gradient(circle, #1b8facce 10%, #00000068 70%);
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.Champion-card{
+    background-color: var(--black);
+    height: 11rem;
+    box-shadow: var(--white) 1px 0px 4px;
+    margin: 18px;
+    border-width: 0.1rem;
+    border-style: solid;
+}
+.Champion-card h2{
+    color: var(--colorBorders);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.Champion-card  img{
+    height: auto;
+    border-bottom: solid 1px;
+    cursor: pointer;
+    width: 8rem;
+}
+
+.Champion-card:hover{
+   transform: scale(1.09);
+   box-shadow: 1px 1px 80px var(--colorEffects);
+   transition: ease 0.4s;
+}
+.SelectedChamp{
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    border-top: var(--colorBorders) solid 1px;
+    align-items: flex-start;
+}
+
+.SelectChamp .back{
+    opacity: 0.4;
+    width: 100%;
+    
+}
+.SelectChamp .champDetails{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SelectChamp .champDetails h2{
+    padding: 14px;
+    text-shadow: 4px 1px 2px var(--black);
+    color: var(--white);
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.lore h2{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.lore button{
+    height: 3rem;
+    width: auto;
+    background-color: var(--black);
+    border: solid 2px var(--colorBorders);
+    border-radius: 4px;
+}
+.lore button:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.4s;
+    border: solid 2px var(--colorEffects);
+}
+.lore button a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    padding: 8px;
+}
+.SelectChamp .FavChampsList{
+   justify-content: center;
+   
+   border-top: solid 1px;
+   width: 100%;
+   overflow: auto;
+}
+.SelectChamp .listFavItem{
+    position: relative;
+    background-size: cover;
+    display: inline-flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.listFavItem img{
+    border: solid 4px var(--colorBorders);
+    border-radius: 50%;
+}
+.FavChampsList::-webkit-scrollbar{
+    height: 1rem;
+    width: 100%;
+}
+.FavChampsList::-webkit-scrollbar-thumb{
+    background-color: var(--colorEffects);
+    border-radius: 20px;
+}
+.FavChampsList::-webkit-scrollbar-track{
+    background-color: var(--black);
+}
+.SelectChamp .Champion-cardFav{
+    position: relative;
+    padding: 0.8rem;
+    border-radius: 60px;
+}
+.Champion-cardFav h2{
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 1.4rem;
+}
+.Champion-cardFav::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    transform: translate(-48%, -50%);
+    width: 34px;
+    height: 34px;
+    background-color: var(--colorBorders);
+    border-radius: 50%;
+    background-image: url(/imgs/whiteStar.png);
+    background-size: cover;
+    z-index: 1;
+}
+.SelectChamp .buttonFav{
+    height: 2.4rem;
+    width: auto;
+    margin: 20px;
+    background-color: var(--black);
+    border: solid 2px var(--colorBorders);
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+.SelectChamp .ListFavError{
+    font-size: 2rem;
+    color: var(--red);
+    text-transform: uppercase;
+    list-style: none;
+}

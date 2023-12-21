@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    color: #e29314;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --colorBorders: #fea71b;
+    --colorEffects: #00ccff;
+    --black : #000000;
+    --white : rgb(255, 255, 255);
+}
+.App1{
+    width: 100%;
+}
+
+::-webkit-scrollbar{
+    width: 0.4rem;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--colorBorders);
+    border-radius: 1px;
+}
+::-webkit-scrollbar-track{
+    color: red;
+}
