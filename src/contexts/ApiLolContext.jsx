@@ -25,7 +25,7 @@ export const ApiLolProvider = ({children}) => {
             setLolApiResponse(response)
         })
         .catch((error) => {
-            console.log(error);
+            window.alert(error);
         })
     } , []);
 

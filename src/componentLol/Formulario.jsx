@@ -32,7 +32,7 @@ import ChampLore from "./ChampLore";
             {edit? 
             <>
             <h1>Não existe campeões com números</h1>
-            <h3 style={{color : 'red' , textTransform : "uppercase"}}>Clique na barra novamente para digitar</h3>
+            <h3>Clique na barra novamente para digitar</h3>
             </>
             : null}
         </section>

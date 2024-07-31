@@ -157,7 +157,7 @@ export default function ChampLore({searchTerm , format}){
         }
         return(
             <React.Fragment>
-                    <div className='ChampSelection'>
+                    <div style={{display: filteredChamps.length > 0? 'flex' : 'none'}} className='ChampSelection'>
                         <FinishDataChamp Champs={filteredChamps}/> 
                     </div>
                     <div>
